@@ -1,0 +1,25 @@
+{# templates/author/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Author{% endblock %}
+
+{% block body %}
+    <h1>Edit Author</h1>
+
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ author.name }}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ author.email }}" required>
+
+        <label for="nbbooks">Number of Books:</label>
+        <input type="number" id="nbbooks" name="nbbooks" value="{{ author.nbbooks }}" required>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <a href="{{ path('show') }}">Back to Author List</a>
+</div>
+{% endblock %}
